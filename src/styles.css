@@ -1,0 +1,151 @@
+/* Global reset */
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: #f5f5f7;
+  max-width: 600px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Form styling */
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #2f2f4f;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  border: none;
+  color: #fff;
+  padding: 0.6em 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 118, 150, 0.4);
+}
+
+/* Danger button */
+.btn.btn-danger {
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+  color: #fff;
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(249, 212, 35, 0.4);
+}
+
+/* Inputs */
+.new-item-form input {
+  outline: none;
+  border: none;
+  background: #3a3a5a;
+  border-radius: 0.5em;
+  padding: 0.6em 1em;
+  color: #f5f5f7;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.new-item-form input:focus {
+  background: #4a4a6a;
+  box-shadow: 0 0 0 2px #ff7eb3;
+}
+
+/* Header */
+.header {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ff7eb3;
+}
+
+/* List styling */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: #2f2f4f;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75em;
+  transition: background 0.2s ease;
+}
+
+.list li:hover {
+  background: #3a3a5a;
+}
+
+.list li label {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* Checkbox replacement */
+.list li label::before {
+  content: "";
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 0.3em;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.list li label:hover::before {
+  background: #ff7eb3;
+  transform: scale(1.1);
+}
+
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: #ff7eb3;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
